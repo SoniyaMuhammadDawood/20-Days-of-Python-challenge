@@ -1,6 +1,7 @@
 import streamlit as st
 from datetime import datetime, date
 from zoneinfo import ZoneInfo
+import base64
 
 time_zone = [
     "UTC",
@@ -17,6 +18,24 @@ time_zone = [
 
 st.set_page_config(page_title="Time-zone-app", page_icon="🕰", layout="centered")
 st.title("Time Zone App")
+
+def get_base64_of_image(image_path):
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode()
+# Add background image using st.image and CSS
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url(data:image/png;base64,{get_base64_of_image("clock.png")});
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 selected_timezone = st.multiselect("Select Time Zones", time_zone, default=("UTC", "Asia/Karachi"))
 
