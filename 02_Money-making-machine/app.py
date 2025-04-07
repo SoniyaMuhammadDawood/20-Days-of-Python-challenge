@@ -25,8 +25,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
-
 def generate_money():
     return random.randint(1, 1000)
 
