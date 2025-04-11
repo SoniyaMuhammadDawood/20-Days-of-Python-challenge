@@ -1,22 +1,15 @@
 import streamlit as st
-import base64
 
 st.set_page_config(page_title="Simple-calculator", page_icon="🔢", layout="centered")
 st.title("**Simple Calculator🔢 ➗✖️➕➖**")
 st.write("**Enter two numbers and choose operation**")
 
-def get_base64_of_image(image_path):
-    with open(image_path, "rb") as image_file:
-        return base64.b64encode(image_file.read()).decode()
-# Add background image using st.image and CSS
+
 st.markdown(
     f"""
     <style>
     .stApp {{
-        background-image: url(data:image/png;base64,{get_base64_of_image("cal.png")});
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        background: linear-gradient(to right, #effbf0, #eeaecd);
     }}
     </style>
     """,
@@ -27,9 +20,9 @@ def main():
     col1, col2 = st.columns(2)
 
     with col1:
-        num1 = st.number_input("**Enter First Number**", value=0)
+        num1 = st.number_input("**Enter First Number**", value=0.0)
     with col2:
-        num2 = st.number_input("**Enter Second Number**", value=0)
+        num2 = st.number_input("**Enter Second Number**", value=0.0)
 
     operation = st.selectbox("**Select operation**", ["Addition (+)", "Subtraction (-)", "Multiplication (*)", "Division (/)"])
 
