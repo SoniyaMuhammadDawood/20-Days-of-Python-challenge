@@ -2,23 +2,21 @@ import streamlit as st
 import time
 import requests
 import random
-import base64
 
 st.set_page_config(page_title="Money making machine", page_icon="💰", layout="centered")
 st.title("Money Making Machine💴💲")
 
-def get_base64_of_image(image_path):
-    with open(image_path, "rb") as image_file:
-        return base64.b64encode(image_file.read()).decode()
+
 # Add background image using st.image and CSS
 st.markdown(
     f"""
     <style>
     .stApp {{
-        background-image: url(data:image/png;base64,{get_base64_of_image("image.png")});
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+      background: linear-gradient(to right, #f78ca0, #fbc8d4, #fef1f2);
+
+
+
+
     }}
     </style>
     """,
