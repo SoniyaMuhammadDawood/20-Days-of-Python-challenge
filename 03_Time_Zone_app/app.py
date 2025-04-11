@@ -1,7 +1,6 @@
 import streamlit as st
 from datetime import datetime, date
 from zoneinfo import ZoneInfo
-import base64
 
 time_zone = [
     "UTC",
@@ -19,18 +18,12 @@ time_zone = [
 st.set_page_config(page_title="Time-zone-app", page_icon="🕰", layout="centered")
 st.title("Time Zone App")
 
-def get_base64_of_image(image_path):
-    with open(image_path, "rb") as image_file:
-        return base64.b64encode(image_file.read()).decode()
-# Add background image using st.image and CSS
+
 st.markdown(
     f"""
     <style>
     .stApp {{
-        background-image: url(data:image/png;base64,{get_base64_of_image("clock.png")});
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        background: linear-gradient(to right,  #a8d89b, #dff6d7, #bfeeae);
     }}
     </style>
     """,
