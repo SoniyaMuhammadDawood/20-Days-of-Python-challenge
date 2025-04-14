@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 import random
 
-# we wil build three simple get endpoints.
+# We wil build three simple get endpoints.
 # 01_ Side_Hustles
 # 02_ Money_Quotes
 # 03_ funny_jokes
