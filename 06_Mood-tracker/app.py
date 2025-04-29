@@ -62,5 +62,5 @@ if not data.empty:
 
 # Footer
 st.markdown("---")
-st.write("**Made with 💖 by **Soniya** ✨**")
+st.write("**Made with 💖 by **Soniya** ..✨**")
 
