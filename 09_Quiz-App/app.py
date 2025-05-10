@@ -54,11 +54,11 @@ if len(st.session_state.asked_questions) < len(all_questions):
         st.session_state.current_question = random.choice(remaining_questions)
         st.session_state.answered = False
 else:
-    st.balloons()  
+    st.balloons()  # 🎈 Streamlit built-in celebration animation
     st.title("🎉 Quiz Completed!")
     st.subheader("Great job!")
     st.success(f"Your total score is: **{st.session_state.score}** out of **{len(all_questions)}**.")
-    st.markdown("Thanks for playing the quiz! 🚀")
+    st.markdown("Thanks for playing the quiz!🚀")
     st.stop()
 
 
@@ -81,3 +81,12 @@ if st.button("**Submit answer**") and not st.session_state.answered:
     st.session_state.answered = True
     st.session_state.current_question = None
     st.rerun()
+
+
+
+
+
+
+
+
+
