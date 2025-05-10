@@ -35,7 +35,7 @@ if st.button("**💰Generate Money💴**"):
 
 def fetch_side_hustle():
     try:
-        response = requests.get('http://127.0.0.1:8000/side_hustle?apikey=12345')
+        response = requests.get('http://127.0.0.1:8000/side_hustle')
         if response.status_code == 200:
             hustle = response.json()
             return hustle["side_hustle"]
@@ -53,7 +53,7 @@ if st.button("**💲📈Generate Profitable Hustles**"):
 
 def fetch_money_quotes():
     try:
-        response = requests.get('http://127.0.0.1:8000/money_quotes?apikey=1234')
+        response = requests.get('http://127.0.0.1:8000/money_quotes')
         if response.status_code == 200:
             quoets = response.json()
             return quoets["money_quotes"]
