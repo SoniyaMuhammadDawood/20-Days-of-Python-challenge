@@ -49,7 +49,7 @@ use_characters = st.checkbox("**Include Special Characters (!@#$%)**")
 # Generate Password Button
 if st.button("**Generate Password**"):
     password = generate_password(length, use_digits, use_characters)
-    st.success(f"**Your password**: `{password}`")
+    st.success(f"**Your password**: `{password}` ")
 
     # Store the password in history (only last 10)
     st.session_state.password_history.insert(0, password)
