@@ -89,6 +89,7 @@ def get_money_quotes():
 #     return{"money_quotes":random.choice(money_quotes)}
 
 
+
 @app.get("/funny_jokes")
 def get_funny_jokes():
     """Return a Random Jokes"""
