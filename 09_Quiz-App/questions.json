@@ -98,6 +98,33 @@
       "question": "What is the correct way to define a dictionary?",
       "option": ["d = [1: 'one']", "d = (1: 'one')", "d = {1: 'one'}", "d = <1: 'one'>"],
       "answer": "d = {1: 'one'}"
+    },
+    {
+        "question": "Which function is used to get input from the user in Python?",
+        "option": ["input()", "get()", "scanf()", "read()"],
+        "answer": "input()"
+    },
+    {
+        "question": "Which keyword is used to handle exceptions in Python?",
+        "option": ["catch", "except", "error", "handle"],
+        "answer": "except"
+    },
+    {
+        "question": "What is the correct way to write a function that returns a value?",
+        "option": ["function myFunc(): return 5", "def myFunc(): return 5", "define myFunc(): return 5", "fun myFunc(): return 5"],
+        "answer": "def myFunc(): return 5"
+    },
+    {
+        "question": "Which of the following is a mutable data type in Python?",
+        "option": ["tuple", "str", "list", "int"],
+        "answer": "list"
+    },
+    {
+        "question": "What will be the output of print(type(3.14))?",
+        "option": ["<class 'float'>", "<class 'int'>", "<class 'str'>", "<class 'double'>"],
+        "answer": "<class 'float'>"
     }
-  ]
+    ]
+    
+  
   
