@@ -28,7 +28,7 @@ def generate_money():
 
 st.subheader("**Instant cash generator**")
 if st.button("**💰Generate Money💴**"):
-    st.write("Counting your money...")
+    st.write("**Counting your money...**")
     time.sleep(1)                    # sleep def use for delay time
     amount = generate_money()
     st.success(f"**You made ${amount}**")       #dollar $ is use to show $ symbol with amount
